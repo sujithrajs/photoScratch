@@ -4,7 +4,7 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
-void main() => runApp(MaterialApp(home: ScratchRevealApp()));
+void main() => runApp(MaterialApp(debugShowCheckedModeBanner:false,home: ScratchRevealApp()));
 
 class ScratchRevealApp extends StatefulWidget {
   @override
@@ -52,7 +52,7 @@ class _ScratchRevealAppState extends State<ScratchRevealApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Random Scratch to Reveal')),
+      // appBar: AppBar(title: Text('Random Scratch to Reveal')),
       body: Center(
         child: _imageBytesList.isEmpty
             ? ElevatedButton(
@@ -79,13 +79,13 @@ class _ScratchRevealAppState extends State<ScratchRevealApp> {
               children: [
                 ElevatedButton(
                   onPressed: _pickRandomImage,
-                  child: Text('Next (Random)'),
+                  child: Text('Next'),
                 ),
-                SizedBox(width: 20),
-                ElevatedButton(
-                  onPressed: _pickImages,
-                  child: Text('Pick More Images'),
-                ),
+                // SizedBox(width: 20),
+                // ElevatedButton(
+                //   onPressed: _pickImages,
+                //   child: Text('Pick More Images'),
+                // ),
               ],
             ),
           ],
